@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device=-width, initial-scale=1">
+    <link rel="styleheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Painting Website Design</title>
+    <link rel="icon" type="image" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+      
+  </div>
+    <div class="mySlides fade">
+      <img src="C:\web_developpment\pianting company website\imgs\paint1.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="C:\web_developpment\pianting company website\imgs\paint6.jpg" style="width:100%">
+    </div>
+    <div class="mySlides fade">
+      <img src="C:\web_developpment\pianting company website\imgs\paint3.jpg" style="width:100%">
+    </div>
+    
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    
+  </div>
+        
+    <header>
+
+        <a href="#" class="logo">PAINTER</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-light gradient-custom">
+        <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#sevices">Services</a>
+            <div class="subnav">
+              <button class="subnavbtn">Pages <i class="fa fa-caret-down"></i></button>
+              <div class="subnav-content">
+                <a href="#Blog Detial">Blog Detail</a>
+                <a href="#The Team"> The Team</a>
+                <a href="#Testimonals">Testimonal</a>
+              </div>
+            </div> 
+            
+            <a href="#contact">Contact</a>
+        </div>
+            
+        </nav>
+    </header>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+
+    </div>
+</body>
+</html>
